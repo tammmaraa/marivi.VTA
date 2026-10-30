@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mariví - Explorar</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="index.html" class="brand">Mariví</a>
+            <nav class="main-nav">
+                <a href="index.html" class="nav-link">Inicio</a>
+                <a href="explorar.html" class="nav-link active" aria-current="page">Explorar</a>
+                <a href="index.html#novedades" class="nav-link">Novedades</a>
+                <a href="index.html#contacto" class="nav-link">Contacto</a>
+                <a href="perfil.html" class="nav-link">Mi Cuenta</a>
+            </nav>
+            <div class="header-actions">
+                <a href="iniciar_sesion.html" class="btn btn-outline">Iniciar Sesión</a>
+                <a href="registro.html" class="btn btn-primary">Registrarse</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="section">
+            <div class="container">
+                <h1 class="section-title">Encuentra el Servicio que Necesitas</h1>
+                <p class="section-subtitle">
+                    Busca entre los freelancers de Cartago y sus alrededores. Explora sin necesidad de crear una cuenta.
+                </p>
+
+                <div class="search-bar">
+                    <input type="text" id="search-input" class="search-input" placeholder="Busca por nombre, profesión o ciudad..." aria-label="Buscar">
+                    <button type="button" id="search-btn" class="btn btn-primary"><i class="fas fa-search"></i> Buscar</button>
+                </div>
+
+                <div class="search-examples" id="search-examples" aria-label="Ejemplos de búsqueda">
+                    <span>Prueba con:</span>
+                    <button type="button" class="chip" data-q="plomero">plomero</button>
+                    <button type="button" class="chip" data-q="fotos de boda">fotos de boda</button>
+                    <button type="button" class="chip" data-q="clases de inglés">clases de inglés</button>
+                    <button type="button" class="chip" data-q="página web">página web</button>
+                    <button type="button" class="chip" data-q="logo Pereira">logo Pereira</button>
+                    <button type="button" class="chip" data-q="electricista Cartago">electricista Cartago</button>
+                </div>
+
+                <div class="explore-layout">
+                    <aside class="card filters" aria-label="Filtros de búsqueda">
+                        <div class="filters-head">
+                            <h2>Filtros</h2>
+                            <button type="button" id="clear-filters" class="link-btn">Limpiar</button>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="filter-category">Profesión / Categoría</label>
+                            <select id="filter-category" class="form-control">
+                                <option value="">Todas</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="filter-rating">Calificación</label>
+                            <select id="filter-rating" class="form-control">
+                                <option value="0">Cualquiera</option>
+                                <option value="4">4 estrellas o más</option>
+                                <option value="4.5">4.5 estrellas o más</option>
+                                <option value="5">5 estrellas</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="filter-location">Ubicación</label>
+                            <select id="filter-location" class="form-control">
+                                <option value="">Todas</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="filter-sort">Ordenar por</label>
+                            <select id="filter-sort" class="form-control">
+                                <option value="relevance">Más relevantes</option>
+                                <option value="rating">Mejor calificación</option>
+                                <option value="reviews">Más reseñas</option>
+                                <option value="years">Más experiencia</option>
+                                <option value="name">Nombre (A-Z)</option>
+                            </select>
+                        </div>
+                    </aside>
+
+                    <div>
+                        <p id="results-count" class="results-count" aria-live="polite"></p>
+                        <div id="profiles-grid" class="profiles-grid"></div>
+                        <p id="no-results" class="no-results" hidden>No encontramos profesionales con esos filtros. Prueba cambiando la búsqueda o limpiando los filtros.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <a href="index.html" class="brand">Mariví</a>
+                <p>Servicios freelance para el municipio de Cartago.</p>
+                <div class="footer-social">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://wa.me/573000000000" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <ul class="footer-contact">
+                <li><i class="fas fa-envelope"></i><a href="mailto:contacto@marivi.co">contacto@marivi.co</a></li>
+                <li><i class="fab fa-whatsapp"></i><a href="https://wa.me/573000000000" target="_blank" rel="noopener">+57 300 000 0000</a></li>
+                <li><i class="fas fa-map-marker-alt"></i><span>Cartago, Valle del Cauca</span></li>
+            </ul>
+        </div>
+        <div class="footer-bottom">
+            <div class="container footer-bottom-inner">
+                <span>&copy; 2026 Mariví. Todos los derechos reservados.</span>
+                <nav>
+                    <a href="#" class="js-open-policy">Términos</a>
+                    <a href="#" class="js-open-policy">Privacidad</a>
+                    <a href="#" class="js-open-policy">Cookies</a>
+                </nav>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
